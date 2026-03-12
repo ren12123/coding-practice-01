@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  text-decoration: none; /* 下線を消す */
+  color: inherit;        /* 親要素の色を引き継ぐ（または #333 などの色を直接指定） */
+}
+
+header {
+    background-color: #FFFFFF;
+    padding-top: clamp(10px,1.3194vw,19px);
+    padding-bottom: clamp(10px,1.3889vw,20px);
+    padding-right: clamp(60px,7vw,100px);
+    padding-left: clamp(60px,6.875vw,99px);
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_name {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-size: clamp(20px,1.944vw,28px);
+    line-height: clamp(30px,2.8472vw,41px);
+}
+
+.header_cv {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-size: clamp(15px,1.25vw,18px);
+    line-height: clamp(20px,1.81vw,26px);
+}
