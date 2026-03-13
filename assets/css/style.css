@@ -149,15 +149,31 @@ section.hero {
     font-size: 16px;
     line-height: 1.625;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .form_label_group {
     display: flex;
-    align-items: center;
-    /* お名前(name)と必須(nes_box)の間に66pxの隙間を作る */
-    gap: 122px; 
+    align-items: center; 
+}
+
+.group-1 {
+    gap: 56px;
+}
+
+.name_content {
+    width: 114px;
+    text-align: left;
+}
+
+.group-2 {
+    gap: 37px;
+}
+
+.tamesi {
+    width: 133px;
+    text-align: left;
 }
 
 .name {
@@ -169,6 +185,7 @@ section.hero {
     background-color: #563C11;
     color: #FFFFFF;
     padding: 4px 6px 2px 7px;
+    border-radius: 2px;
 }
 
 .form_input {
@@ -188,6 +205,18 @@ section.hero {
   /* デフォルトのスタイルをリセット（特にiPhone対策） */
   appearance: none;
   -webkit-appearance: none;
+}
+
+.mail {
+    margin-bottom: 0px;
+    margin-top: 6px;
+}
+
+.messeage {
+}
+
+.form_messeage {
+    height: 160px;
 }
 
 @media (max-width: 768px) {
