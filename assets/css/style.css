@@ -8,12 +8,16 @@ a {
   color: inherit;        /* 親要素の色を引き継ぐ（または #333 などの色を直接指定） */
 }
 
+body {
+    font-family: "Kaisei HarunoUmi", serif;
+}
+
 header {
     background-color: #FFFFFF;
     padding-top: clamp(10px,1.3194vw,19px);
     padding-bottom: clamp(10px,1.3889vw,20px);
-    padding-right: clamp(60px,7vw,100px);
-    padding-left: clamp(60px,6.875vw,99px);
+    padding-right: clamp(20px,7vw,100px);
+    padding-left: clamp(20px,6.875vw,99px);
 }
 
 .header_content {
@@ -25,11 +29,85 @@ header {
 .header_name {
     font-family: "Kaisei HarunoUmi", serif;
     font-size: clamp(20px,1.944vw,28px);
-    line-height: clamp(30px,2.8472vw,41px);
+    line-height: 1.4643;
+}
+
+section {
+    padding-top: 72px;
 }
 
 .header_cv {
     font-family: "Kaisei HarunoUmi", serif;
     font-size: clamp(15px,1.25vw,18px);
-    line-height: clamp(20px,1.81vw,26px);
+    line-height: 1.444;
+}
+
+.hero {
+    background-image: url("../../imges/bg.png"),
+                      url("../../imges/fv-bg.jpg");
+    
+    background-size: cover;
+    background-position: center;
+}
+
+section.hero {
+    padding-top: 46px;
+    padding-bottom: 47px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero_content {
+    color: #FFFFFF;
+}
+
+.title {
+    font-size: clamp(40px,3.0556vw,44px);
+    line-height: 1.4545;
+    margin-bottom: clamp(10px,1.11vw,16px);
+}
+
+.sub-title {
+    font-size: clamp(21px,1.667vw,24px);
+}
+
+.udon {
+    width: 100%;
+    height: 100%;
+    max-width: 409px;
+    max-height: 307px;
+    object-fit: cover; /* 画像が歪まないように調整 */
+}
+
+.menu {
+    font-size: 28px;
+    line-height: 1.46;
+}
+
+.menu-picture {
+    display: flex;
+    justify-content: center;
+    gap: clamp(16px,2.22vw,32px);
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .udon {
+    width: 100%;    /* 親要素の幅いっぱいに広げる */
+    height: 100%;   /* 比率を維持して高さを自動調整 */
+    max-width: 375px; /* 必要以上に大きくならないようガード */
+  }
 }
