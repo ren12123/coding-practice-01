@@ -33,7 +33,8 @@ header {
 }
 
 section {
-    padding-top: 72px;
+    padding-top: clamp(26px,5vw,72px);
+    padding-bottom: clamp(30px,5.56vw,80px);
 }
 
 .header_cv {
@@ -84,18 +85,68 @@ section.hero {
     object-fit: cover; /* 画像が歪まないように調整 */
 }
 
-.menu {
-    font-size: 28px;
-    line-height: 1.46;
-}
-
-.menu-picture {
+.second_content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: clamp(16px,2.22vw,32px);
 }
 
 
+.menu {
+    font-size: clamp(20px,1.94vw,28px);
+    line-height: 1.46;
+}
+
+.sp-menu {
+    display: none;
+}
+
+.menu-picture {
+    display: flex;
+    gap: clamp(16px,2.22vw,32px);
+}
+
+.menu-img {
+    max-width: 240px;
+}
+
+.contact {
+    background-color: #F2F1F0;
+}
+
+.main-tell {
+    font-size: clamp(20px,1.94vw,28px);
+    line-height: 1.46;
+}
+
+.second-tell {
+    font-size: clamp(14px,1.11vw,16px);
+    line-height: 1.4375;
+}
+
+.form_item {
+    display: flex;
+}
+
+.form_input {
+  /* サイズの指定：PCでの最大幅を固定しつつ、スマホで縮むようにする */
+  width: 100%;
+  max-width: 330px;
+  height: 47px;
+  
+  /* 余白とボックスサイズ（これがないとpaddingでサイズがズレます） */
+  box-sizing: border-box;
+  padding: 0 12px;
+
+  /* 見た目の装飾 */
+  background-color: #F2F1F0; /* 親の .contact 背景色と同じにする */
+  border-radius: 4px;        /* 角の半径 */
+  
+  /* デフォルトのスタイルをリセット（特にiPhone対策） */
+  appearance: none;
+  -webkit-appearance: none;
+}
 
 @media (max-width: 768px) {
 
@@ -110,4 +161,14 @@ section.hero {
     height: 100%;   /* 比率を維持して高さを自動調整 */
     max-width: 375px; /* 必要以上に大きくならないようガード */
   }
+
+.sp-menu {
+    display: inline;
+}
+
+  .menu-picture {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 }
