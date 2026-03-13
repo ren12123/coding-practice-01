@@ -10,6 +10,7 @@ a {
 
 body {
     font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 400;
 }
 
 header {
@@ -24,6 +25,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #333333;
+    font-weight: bold;
 }
 
 .header_name {
@@ -68,6 +71,7 @@ section.hero {
 }
 
 .title {
+    font-weight: bold;
     font-size: clamp(40px,3.0556vw,44px);
     line-height: 1.4545;
     margin-bottom: clamp(10px,1.11vw,16px);
@@ -75,6 +79,7 @@ section.hero {
 
 .sub-title {
     font-size: clamp(21px,1.667vw,24px);
+    font-weight: regular;
 }
 
 .udon {
@@ -94,6 +99,7 @@ section.hero {
 
 
 .menu {
+    font-weight: bold;
     font-size: clamp(20px,1.94vw,28px);
     line-height: 1.46;
 }
@@ -116,6 +122,7 @@ section.hero {
 }
 
 .main-tell {
+    font-weight: bold;
     font-size: clamp(20px,1.94vw,28px);
     line-height: 1.46;
 }
