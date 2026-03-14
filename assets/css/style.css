@@ -212,12 +212,30 @@ section.hero {
     margin-top: 6px;
 }
 
-.messeage {
+.message_content {
+    display: flex;
+    /* align-items: center; から変更 */
+    align-items: flex-start; 
+    
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.form_label_group {
+    display: flex;
+    align-items: center; /* 「メッセージ内容」という文字と「必須」タグ自体は横で中央揃え */
+    
+    /* 入力欄の1行目の文字と高さを合わせるため、少しだけ上に余白を入れる */
+    padding-top: 10px; 
 }
 
 .form_messeage {
     height: 160px;
+    padding: 12px;
 }
+
+
 
 @media (max-width: 768px) {
 
