@@ -224,7 +224,7 @@ section.hero {
 
 .form_label_group {
     display: flex;
-    align-items: center; /* 「メッセージ内容」という文字と「必須」タグ自体は横で中央揃え */
+    align-items: center; /* 「メッセージと「必須」タグ自体は横で中央揃え */
     
     /* 入力欄の1行目の文字と高さを合わせるため、少しだけ上に余白を入れる */
     padding-top: 10px; 
@@ -235,7 +235,14 @@ section.hero {
     padding: 12px;
 }
 
-
+.form_btn {
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: #563C11;
+    color: #FFFFFF;
+    padding-inline: clamp(30px,7.92vw,112px);
+    border-radius: 4px;
+}
 
 @media (max-width: 768px) {
 
@@ -251,13 +258,18 @@ section.hero {
     max-width: 375px; /* 必要以上に大きくならないようガード */
   }
 
-.sp-menu {
-    display: inline;
-}
+    .sp-menu {
+        display: inline;
+    }
 
-  .menu-picture {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+    .menu-picture {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form_item {
+        align-items: center;
+        flex-direction: column;
+    }
 }
