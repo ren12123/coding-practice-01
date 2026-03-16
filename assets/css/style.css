@@ -126,7 +126,8 @@ section.hero {
 }
 
 .contact_content {
-    width: 570px;
+    max-width: 570px;
+    width: 100%;
     text-align: center;
 }
 
@@ -242,6 +243,8 @@ section.hero {
     color: #FFFFFF;
     padding-inline: clamp(30px,7.92vw,112px);
     border-radius: 4px;
+    margin-bottom: 2px;
+    padding-block: 5px;
 }
 
 @media (max-width: 768px) {
@@ -271,5 +274,9 @@ section.hero {
     .form_item {
         align-items: center;
         flex-direction: column;
+    }
+
+    .second-tell {
+        margin-inline: 40px;
     }
 }
