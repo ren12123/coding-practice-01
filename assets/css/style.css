@@ -247,6 +247,12 @@ section.hero {
     padding-block: 5px;
 }
 
+.error-style {
+    text-decoration: underline wavy #e53e3e; /* 赤い波線 */
+    color: #e53e3e; /* 文字も赤くするとより親切 */
+    transition: all 0.3s;
+}
+
 @media (max-width: 768px) {
 
   .hero {
