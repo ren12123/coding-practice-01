@@ -15,4 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    const moveBtns = document.querySelectorAll('.move_btn');
+    const contactSection = document.querySelector('.contact');
+
+        moveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
 });

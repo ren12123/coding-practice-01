@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none; /* 下線を消す */
   color: inherit;        /* 親要素の色を引き継ぐ（または #333 などの色を直接指定） */
@@ -40,7 +44,7 @@ section {
     padding-bottom: clamp(30px,5.56vw,80px);
 }
 
-.header_cv {
+.header-btn {
     font-family: "Kaisei HarunoUmi", serif;
     font-size: clamp(15px,1.25vw,18px);
     line-height: 1.444;
@@ -251,6 +255,20 @@ section.hero {
     text-decoration: underline wavy #e53e3e; /* 赤い波線 */
     color: #e53e3e; /* 文字も赤くするとより親切 */
     transition: all 0.3s;
+}
+
+.footer {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.move_btn {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
