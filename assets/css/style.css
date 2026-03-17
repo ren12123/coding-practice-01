@@ -268,7 +268,37 @@ section.hero {
     color: inherit;
     font: inherit;
     cursor: pointer;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: clamp(20px, 7.22vw, 104px);
+    padding-right: clamp(20px, 8.33vw, 120px);
+    padding-top: clamp(24px, 2.78vw, 40px);
+    padding-bottom: clamp(30px, 3.61vw, 52px);
+}
+
+.fotter_left {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.625;
+    margin-top: 1px;
+}
+
+.logo-btn {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: clamp(20px,2.5vw,36px);
     text-decoration: underline;
+    font-size: 16px;
+    line-height: 1.6875;
+}
+
+.logo {
+    font-size: 14px;
+    line-height: 1.43;
 }
 
 @media (max-width: 768px) {
