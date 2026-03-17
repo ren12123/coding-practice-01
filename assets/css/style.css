@@ -249,6 +249,7 @@ section.hero {
     border-radius: 4px;
     margin-bottom: 2px;
     padding-block: 5px;
+    cursor: pointer;
 }
 
 .error-style {
@@ -268,6 +269,17 @@ section.hero {
     color: inherit;
     font: inherit;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.move_btn:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.move_btn:active {
+    color: #0056b3;
+    transform: translateY(1px);
 }
 
 .footer_content {
@@ -291,9 +303,12 @@ section.hero {
     flex-direction: column;
     text-align: right;
     gap: clamp(20px,2.5vw,36px);
-    text-decoration: underline;
+}
+
+.low-btn {
     font-size: 16px;
     line-height: 1.6875;
+    text-decoration: underline;
 }
 
 .logo {
