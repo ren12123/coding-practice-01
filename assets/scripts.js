@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const parent = input.closest('.form_item');
             const label = parent.querySelector('.name');
 
-            if (input.value.trim() === '') {
+            if (input.value.trim() === '' && !input.classList.contains('form_messeage')) {
                 label.classList.add('error-style');
             } else {
                 label.classList.remove('error-style');
