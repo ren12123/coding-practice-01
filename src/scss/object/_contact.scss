@@ -1,0 +1,133 @@
+@use "../foundation/variables" as v;
+
+/* --- Contact --- */
+.contact {
+    background-color: #F2F1F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // 元の clamp 数値をそのまま維持
+    padding-top: clamp(26px, 5vw, 72px);
+    padding-bottom: clamp(30px, 5.56vw, 80px);
+}
+
+.contact__content {
+    max-width: 570px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-tell {
+    font-weight: bold;
+    font-size: clamp(20px, 1.94vw, 28px);
+    line-height: 1.46;
+    margin-left: 6px; // この微調整も維持
+    margin-bottom: clamp(24px, 2.22vw, 32px);
+}
+
+.second-tell {
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: 1.4375;
+    margin-left: 14px; // この微調整も維持
+    margin-bottom: clamp(20px, 2.78vw, 40px);
+}
+
+/* --- Form --- */
+.form__item {
+    font-size: 16px;
+    line-height: 1.625;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form__label-group {
+    display: flex;
+    align-items: center;
+}
+
+.name_content {
+    width: 114px; // 固定幅を厳守
+    text-align: left;
+}
+
+.tamesi {
+    width: 133px; // 固定幅を厳守
+    text-align: left;
+}
+
+.form__label {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.nes_box {
+    background-color: #563C11;
+    color: #FFFFFF;
+    padding: 4px 6px 2px 7px; // 1px単位で維持
+    border-radius: 2px;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 330px;
+    height: 47px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    background-color: #F2F1F0;
+    border-radius: 4px;
+    border: 1px solid #333333;
+    font-family: inherit;
+    font-size: 16px;
+
+    &:focus {
+        outline: 2px solid #563C11;
+        outline-offset: -2px;
+    }
+}
+
+.form__item--message {
+    align-items: flex-start;
+    margin-bottom: 36px;
+}
+
+.form_messeage {
+    height: 160px;
+    padding: 12px;
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form_btn {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: #563C11;
+    color: #FFFFFF;
+    // 左右と上下のパディングを元コード通りに
+    padding-inline: clamp(30px, 7.92vw, 112px);
+    padding-block: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+/* --- Responsive (元コードのメディアクエリをそのまま移植) --- */
+@media (max-width: 768px) {
+    .form__item {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        
+        &__input {
+            max-width: 100%;
+        }
+    }
+    
+    .second-tell {
+        margin-inline: 40px;
+        margin-left: 0; // PC用の余白をリセット
+    }
+}

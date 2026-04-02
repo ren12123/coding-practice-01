@@ -1,0 +1,40 @@
+@use "../foundation/variables" as v;
+
+.footer {
+    background-color: v.$color-text; // #333333
+    color: v.$color-white;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: clamp(20px, 7.22vw, 104px);
+    padding-right: clamp(20px, 8.33vw, 120px);
+    padding-top: clamp(24px, 2.78vw, 40px);
+    padding-bottom: clamp(30px, 3.61vw, 52px);
+}
+
+.fotter_left {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo-btn {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: clamp(20px, 2.5vw, 36px);
+}
+
+.footer__btn {
+    font-size: 16px;
+    color: v.$color-white;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 14px;
+}

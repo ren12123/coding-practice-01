@@ -1,0 +1,12 @@
+// foundation
+@use "./foundation/variables";
+@use "./foundation/base";
+
+// layout
+@use "./layout/header";
+@use "./layout/footer";
+
+// object
+@use "./object/hero";
+@use "./object/second";
+@use "./object/contact";

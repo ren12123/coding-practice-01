@@ -1,0 +1,28 @@
+@use "./variables" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$font-main;
+    font-weight: 400;
+    color: v.$color-text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding-top: clamp(26px, 5vw, 72px);
+    padding-bottom: clamp(30px, 5.56vw, 80px);
+}

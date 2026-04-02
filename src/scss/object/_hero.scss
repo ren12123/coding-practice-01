@@ -1,0 +1,36 @@
+@use "../foundation/variables" as v;
+
+.hero {
+    background-image: url("/imgs/bg.png"), url("/imgs/fv-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 46px 20px 47px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+.hero__title {
+    font-weight: bold;
+    font-size: clamp(40px, 3.05vw, 44px);
+    color: v.$color-white;
+    margin-bottom: 16px;
+}
+
+.hero__sub-title {
+    font-size: clamp(21px, 1.6vw, 24px);
+    color: v.$color-white;
+}
+
+.hero__img {
+    width: 100%;
+    max-width: 409px;
+    object-fit: cover;
+}

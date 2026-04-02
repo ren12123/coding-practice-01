@@ -6,92 +6,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/src/scss/style.scss">
+    <title>どんどこうどん</title>
 </head>
-
 <body>
-    <header>
-        <div class="header_content">
-            <p class="header_name">どんどこうどん</p>
-            <button type="button" class="move_btn header-btn">お問い合わせ</button>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__name">どんどこうどん</h1>
+            <button type="button" class="header__btn move_btn">お問い合わせ</button>
         </div>
     </header>
-    
-    <main>
+
+    <main class="main">
         <section class="hero">
-            <div class="hero_content">
-                <p class="title">どんどこうどん</h1>
-                <p class="sub-title">小麦からこだわるうどん屋</h2>
+            <div class="hero__content">
+                <p class="hero__title">どんどこうどん</p>
+                <p class="hero__sub-title">小麦からこだわるうどん屋</p>
             </div>
-                
-            <img class="udon" src="./imges/fv-picture.png" alt="udon">
+            <img class="hero__img udon" src="/imgs/fv-picture.png" alt="どんどこうどん看板メニュー" loading="eager">
         </section>
 
         <section class="second">
-            <div class="second_content">
-                <p class="menu">どんどこうどんの<br class="sp-menu">メニュー一覧</p>
-
-                <div class="menu-picture">
-                    <img class="left-menu menu-img" src="./imges/menu1-left.jpg" alt="hidari">
-                    <img class="middle-menu menu-img" src="./imges/menu2-middle.jpg" alt="mannaka">
-                    <img class="right-menu menu-img" src="./imges/menu3-right.jpg" alt="migi">
+            <div class="second__content">
+                <h2 class="second__menu">どんどこうどんの<br class="second__sp-menu sp-menu">メニュー一覧</h2>
+                <div class="second__menu-picture menu-picture">
+                    <img class="second__img--left menu-img" src="/imgs/menu1-left.jpg" alt="冷やしうどん">
+                    <img class="second__img--middle menu-img" src="/imgs/menu2-middle.jpg" alt="温かいうどん">
+                    <img class="second__img--right menu-img" src="/imgs/menu3-right.jpg" alt="天ぷら盛り合わせ">
                 </div>
             </div>
         </section>
 
-        <section class="contact">
-            <div class="contact_content">
-                <div class="main-contact">
-                    <h2 class="main-tell">お問い合わせ</h2>
-                    <p class="second-tell">どんどこうどんに対するお問い合わせは以下からお願いします。</p>
+        <section class="contact" id="contact">
+            <div class="contact__content">
+                <div class="contact__main-contact main-contact">
+                    <h2 class="contact__main-tell main-tell">お問い合わせ</h2>
+                    <p class="contact__second-tell second-tell">どんどこうどんに対するお問い合わせは以下からお願いします。</p>
                 </div>
             
-                <div class="form">
-                    <div class="form_item">
-                        <div class="form_label_group group-1">
-                            <div class="name_content">  
-                                <label for="name" class="name">お名前</label>
+                <form action="#" method="post" class="contact__form form">
+                    <div class="form__item">
+                        <div class="form__label-group group-1">
+                            <div class="form__name-content name_content">  
+                                <label for="name" class="form__label name">お名前</label>
                             </div>
-                            <span class="nes_box">必須</span>
+                            <span class="form__nes-box nes_box">必須</span>
                         </div>
-                        <input type="text" id="name" name="name" class="form_input">
+                        <input type="text" id="name" name="user_name" class="form__input" required autocomplete="name">
                     </div>
 
-                    <div class="form_item">
-                        <div class="form_label_group group-2">
-                            <div class="tamesi">
-                                <label for="mail" class="name mail">メールアドレス</label>
+                    <div class="form__item">
+                        <div class="form__label-group group-2">
+                            <div class="form__tamesi tamesi">
+                                <label for="mail" class="form__label name mail">メールアドレス</label>
                             </div>
-                            <span class="nes_box">必須</span>
+                            <span class="form__nes-box nes_box">必須</span>
                         </div>
-                        <input type="email" id="name" name="name" class="form_input">
+                        <input type="email" id="mail" name="user_mail" class="form__input" required autocomplete="email">
                     </div>
 
-                    <div class="form_item message_content">
-                        <div class="form_label_group group-3">
-                            <label for="messeage" class="name messeage">メッセージ内容</label>
+                    <div class="form__item form__item--message message_content">
+                        <div class="form__label-group group-3">
+                            <label for="message" class="form__label name messeage">メッセージ内容</label>
                         </div>
-                        <textarea id="message" name="message" class="form_input form_messeage" spellcheck="false"></textarea>
+                        <textarea id="message" name="user_message" class="form__input form_messeage" spellcheck="false" required></textarea>
                     </div>
-                </div>
-            
-                <div class="form_btn_item">
-                    <button type="submit" class="form_btn">問い合わせる</button>
-                </div>
+
+                    <div class="contact__btn-item form_btn_item">
+                        <button type="submit" class="contact__form-btn form_btn">問い合わせる</button>
+                    </div>
+                </form>
             </div>
         </section>
 
         <footer class="footer">
-            <div class="footer_content">
-                <p class="fotter_left">どんどこうどん</p>
-                <div class="logo-btn">    
-                    <button type="button" class="move_btn low-btn">お問い合わせ</button>
-                    <p class="logo">© どんどこうどん</p>
+            <div class="footer__content">
+                <p class="footer__left fotter_left">どんどこうどん</p>
+                <div class="footer__logo-btn logo-btn">    
+                    <button type="button" class="footer__btn move_btn low-btn">お問い合わせ</button>
+                    <p class="footer__logo logo">© どんどこうどん</p>
                 </div>
             </div>
         </footer>
     </main>
-    <script src="./assets/scripts.js"></script>
+    <script type="module" src="/src/ts/style.ts"></script>
 </body>
 </html>

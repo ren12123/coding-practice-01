@@ -1,0 +1,45 @@
+@use "../foundation/variables" as v;
+
+.second {
+    background-color: v.$color-white;
+}
+
+.second__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 2.22vw, 32px);
+}
+
+.second__menu {
+    font-weight: bold;
+    font-size: clamp(20px, 1.94vw, 28px);
+    line-height: 1.46;
+    text-align: center;
+}
+
+.sp-menu {
+    display: none;
+}
+
+.second__menu-picture {
+    display: flex;
+    gap: clamp(16px, 2.22vw, 32px);
+}
+
+.menu-img {
+    max-width: 240px;
+    height: auto;
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+    .sp-menu {
+        display: inline;
+    }
+
+    .second__menu-picture {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
