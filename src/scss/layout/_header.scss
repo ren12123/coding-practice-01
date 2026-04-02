@@ -23,4 +23,27 @@ header {
     cursor: pointer;
     background: none;
     border: none;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(38, 114, 228);
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 0.6s ease;
+    }
+
+    &:hover {
+        color: rgb(38, 114, 228);
+
+        &::after {
+           transform: scaleX(1);
+        }
+    }
 }
