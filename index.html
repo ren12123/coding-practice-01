@@ -38,42 +38,42 @@
         </section>
 
         <section class="contact" id="contact">
-            <div class="contact__content">
-                <div class="contact__main-contact main-contact">
-                    <h2 class="contact__main-tell main-tell">お問い合わせ</h2>
-                    <p class="contact__second-tell second-tell">どんどこうどんに対するお問い合わせは以下からお願いします。</p>
+            <div class="contact__inner">
+                <div class="contact__header">
+                    <h2 class="contact__title">お問い合わせ</h2>
+                    <p class="contact__text">どんどこうどんに対するお問い合わせは以下からお願いします。</p>
                 </div>
-            
+    
                 <form action="#" method="post" class="contact__form form">
                     <div class="form__item">
-                        <div class="form__label-group group-1">
-                            <div class="form__name-content name_content">  
-                                <label for="name" class="form__label name">お名前</label>
+                        <div class="form__label-group">
+                            <div class="form__label-container form__label-container--name">  
+                                <label for="name" class="form__label">お名前</label>
                             </div>
-                            <span class="form__nes-box nes_box">必須</span>
+                            <span class="form__required">必須</span>
                         </div>
                         <input type="text" id="name" name="user_name" class="form__input" required autocomplete="name">
                     </div>
 
                     <div class="form__item">
-                        <div class="form__label-group group-2">
-                            <div class="form__tamesi tamesi">
-                                <label for="mail" class="form__label name mail">メールアドレス</label>
+                        <div class="form__label-group">
+                            <div class="form__label-container form__label-container--mail">
+                                <label for="mail" class="form__label">メールアドレス</label>
                             </div>
-                            <span class="form__nes-box nes_box">必須</span>
+                            <span class="form__required">必須</span>
                         </div>
                         <input type="email" id="mail" name="user_mail" class="form__input" required autocomplete="email">
                     </div>
 
-                    <div class="form__item form__item--message message_content">
-                        <div class="form__label-group group-3">
-                            <label for="message" class="form__label name messeage">メッセージ内容</label>
+                    <div class="form__item form__item--message">
+                        <div class="form__label-group">
+                            <label for="message" class="form__label">メッセージ内容</label>
                         </div>
-                        <textarea id="message" name="user_message" class="form__input form_messeage" spellcheck="false" required></textarea>
+                        <textarea id="message" name="user_message" class="form__input form__input--textarea" spellcheck="false" required></textarea>
                     </div>
 
-                    <div class="contact__btn-item form_btn_item">
-                        <button type="submit" class="contact__form-btn form_btn">問い合わせる</button>
+                    <div class="form__btn-wrapper">
+                        <button type="submit" class="form__btn">問い合わせる</button>
                     </div>
                 </form>
             </div>
