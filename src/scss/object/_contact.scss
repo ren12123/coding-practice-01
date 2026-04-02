@@ -71,8 +71,8 @@
         text-align: left;
         flex-shrink: 0;
         
-        &--name { width: 114px; }
-        &--mail { width: 133px; }
+        &--name { width: 170px; }
+        &--mail { width: 170px; }
     }
 
     &__label {
@@ -85,11 +85,11 @@
     &__required {
         background-color: #563C11;
         color: #FFFFFF;
-        font-size: 12px;
+        font-size: 16px;
         /* line-height を 1 にして、フォント自体の高さを背景に干渉させない */
         line-height: 1.625; 
         /* padding を元コード通りに強制。4-6-2-7 */
-        padding: 4px 6px 2px 7px;
+        padding: 4px 6.5px 2px 7.5px;
         border-radius: 2px;
         /* 文字を確実に中心に置き、paddingを正しく反映させる設定 */
         display: inline-flex;
